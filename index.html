@@ -3,124 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HIDDEN PROTECTOR - Loadstring Generator</title>
+  <title>HIDDEN PROTECTOR - hfnq</title>
   <style>
     :root {
-      --bg: #0f0f11;
-      --card: #16181d;
-      --accent: #00d4ff;
-      --text: #e0e0e0;
+      --bg: #0a0a0c;
+      --card: #111114;
+      --accent: #00eaff;
+      --text: #e0f0ff;
       --gray: #888;
     }
-    * { margin:0; padding:0; box-sizing:border-box; }
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       min-height: 100vh;
-      padding: 20px;
-      line-height: 1.5;
+      padding: 24px 16px;
+      line-height: 1.6;
     }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    header {
-      text-align: center;
-      margin: 40px 0 50px;
-    }
+    .container { max-width: 920px; margin: 0 auto; }
+    header { text-align: center; margin: 50px 0 60px; }
     h1 {
-      font-size: 3.2rem;
-      font-weight: 800;
-      letter-spacing: -1px;
-      background: linear-gradient(90deg, #00d4ff, #a855f7);
+      font-size: 3.5rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, #00eaff, #a020f0);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
-    .subtitle {
-      color: var(--gray);
-      font-size: 1.1rem;
-    }
+    .subtitle { color: #aaa; font-size: 1.15rem; }
     .card {
       background: var(--card);
-      border-radius: 12px;
-      padding: 28px;
+      border-radius: 14px;
+      padding: 32px;
       border: 1px solid #222;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-      margin-bottom: 30px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.7);
+      margin-bottom: 40px;
     }
-    label {
-      display: block;
-      margin-bottom: 12px;
-      font-weight: 600;
-      color: #ccc;
-    }
+    label { display: block; margin-bottom: 14px; font-weight: 600; color: #ccc; }
     textarea {
       width: 100%;
-      min-height: 220px;
-      background: #0a0a0c;
+      min-height: 260px;
+      background: #050507;
       color: #eee;
       border: 1px solid #333;
-      border-radius: 8px;
-      padding: 16px;
-      font-family: 'Consolas', 'Courier New', monospace;
-      font-size: 1rem;
+      border-radius: 10px;
+      padding: 18px;
+      font-family: 'Consolas', monospace;
+      font-size: 1.05rem;
       resize: vertical;
     }
     button {
-      background: linear-gradient(90deg, #00d4ff, #0095cc);
+      background: linear-gradient(90deg, #00eaff, #009acd);
       color: white;
       border: none;
-      padding: 14px 32px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      border-radius: 8px;
+      padding: 16px 40px;
+      font-size: 1.15rem;
+      font-weight: bold;
+      border-radius: 10px;
       cursor: pointer;
-      margin-top: 16px;
-      transition: all 0.2s;
+      margin-top: 20px;
+      transition: all 0.25s;
     }
     button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 234, 255, 0.35);
     }
-    #result {
-      margin-top: 40px;
-      display: none;
-    }
+    #result { display: none; margin-top: 50px; }
     .loadstring-box {
-      background: #111;
+      background: #0d0d0f;
       border: 1px solid #444;
-      border-radius: 8px;
-      padding: 20px;
+      border-radius: 10px;
+      padding: 24px;
       font-family: monospace;
       white-space: pre-wrap;
       word-break: break-all;
       position: relative;
+      font-size: 1.05rem;
     }
     .copy-btn {
       position: absolute;
-      top: 12px;
-      right: 12px;
-      background: #333;
+      top: 16px;
+      right: 16px;
+      background: #444;
       color: white;
       border: none;
-      padding: 8px 14px;
-      border-radius: 6px;
+      padding: 10px 18px;
+      border-radius: 8px;
       cursor: pointer;
-      font-size: 0.9rem;
     }
-    .copy-btn:hover { background: #555; }
+    .copy-btn:hover { background: #666; }
     .warning {
-      margin-top: 20px;
-      color: #ff9f9f;
-      font-size: 0.95rem;
+      margin-top: 24px;
+      padding: 16px;
+      background: #2a1a1a;
+      border: 1px solid #600;
+      border-radius: 10px;
+      color: #ffaaaa;
     }
     footer {
       text-align: center;
-      margin-top: 80px;
+      margin-top: 100px;
       color: #555;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
     }
   </style>
 </head>
@@ -129,68 +113,68 @@
   <div class="container">
     <header>
       <h1>HIDDEN PROTECTOR</h1>
-      <div class="subtitle">Hide your scripts • Only Roblox can read them</div>
+      <div class="subtitle">by hfnq • Generate loadstrings for your scripts</div>
     </header>
 
     <div class="card">
-      <label for="script">Paste your Lua script here:</label>
-      <textarea id="script" placeholder="-- Your awesome script here&#10;print('Hello from hidden script!')&#10;&#10;-- It will be hidden behind ACCESS DENIED in browser" required></textarea>
+      <label for="script">Paste your Lua / Roblox script:</label>
+      <textarea id="script" placeholder="-- Example&#10;print('Hello from hfnq script!')&#10;&#10;-- This will be placed in a .lua file path" required></textarea>
       
       <button onclick="generate()">GENERATE LOADSTRING</button>
     </div>
 
     <div id="result" class="card">
-      <h2>Your Loadstring (copy & paste into executor)</h2>
+      <h2>Ready to paste in your executor:</h2>
       <div class="loadstring-box" id="loadstring"></div>
       <button class="copy-btn" onclick="copyToClipboard()">Copy</button>
       
-      <p class="warning">
-        → Visiting the raw link in your browser shows <strong>ACCESS DENIED</strong><br>
-        → But <code>game:HttpGet()</code> from Roblox will still execute your script
-      </p>
+      <div class="warning">
+        <strong>Important – GitHub limitation:</strong><br>
+        → The raw link[](https://hfnq.github.io/undeobfuscatable/raw/XXXX.lua) is <strong>public</strong>.<br>
+        → Anyone can open it in a browser and see your full script (no real "ACCESS DENIED").<br>
+        → This is just a clean generator UI — for actual hiding you need a backend like Vercel with User-Agent filtering.<br>
+        → Consider obfuscating your code first if you want some protection.
+      </div>
     </div>
 
     <footer>
-      Made with ♡ • Host on GitHub Pages • Change the base URL below if needed
+      Hosted on GitHub Pages • hfnq/undeobfuscatable • Change ID format or add obfuscation if needed
     </footer>
   </div>
 
   <script>
-    // === IMPORTANT: Change this to YOUR GitHub Pages URL ===
-    const BASE_URL = "https://YOUR-USERNAME.github.io/YOUR-REPO-NAME";
+    // Your exact GitHub Pages base (no trailing slash)
+    const BASE_URL = "https://hfnq.github.io/undeobfuscatable";
 
     function generate() {
       const code = document.getElementById("script").value.trim();
       if (!code) {
-        alert("Please enter some code first!");
+        alert("Enter some code first!");
         return;
       }
 
-      // Simple random ID (you could use uuid lib or crypto.randomUUID() if you want)
-      const id = Math.random().toString(36).substring(2, 10) + 
-                 Math.random().toString(36).substring(2, 10);
+      // Generate a random-ish ID like your example (16 chars alphanumeric)
+      const chars = "abcdefghijklmnopqrstuvwxyz0123456789";
+      let id = "";
+      for (let i = 0; i < 16; i++) {
+        id += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
 
       const rawUrl = `${BASE_URL}/raw/${id}.lua`;
       const loadstr = `loadstring(game:HttpGet("${rawUrl}"))()`;
 
       document.getElementById("loadstring").textContent = loadstr;
       document.getElementById("result").style.display = "block";
-
-      // Scroll to result
       document.getElementById("result").scrollIntoView({ behavior: "smooth" });
 
-      // You can store code → localStorage or IndexedDB if you want persistence in browser
-      // For real usage you'd need a backend or GitHub API to create files
-      alert("Note: This is a client-side demo only.\nFor real hidden scripts you need a backend that serves code only to Roblox User-Agents.\nGitHub raw files are public → this is just a generator UI.");
+      alert("Generated!\n\nNote: On GitHub Pages the script file is public.\nUse a real backend (Vercel etc.) for true access control.");
     }
 
     function copyToClipboard() {
       const text = document.getElementById("loadstring").textContent;
-      navigator.clipboard.writeText(text).then(() => {
-        alert("Loadstring copied!");
-      }).catch(() => {
-        alert("Copy failed — select text manually.");
-      });
+      navigator.clipboard.writeText(text)
+        .then(() => alert("Copied to clipboard!"))
+        .catch(() => alert("Copy failed — select manually."));
     }
   </script>
 </body>
